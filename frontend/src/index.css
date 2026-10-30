@@ -1,0 +1,13 @@
+body{
+    margin:0;
+    padding:0;
+    background:#F8FAFC;
+}
+
+a{
+    text-decoration:none;
+}
+
+button{
+    cursor:pointer;
+}

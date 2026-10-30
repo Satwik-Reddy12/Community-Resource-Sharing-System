@@ -1,0 +1,184 @@
+.borrowings-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 40px;
+}
+
+.borrowings-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.borrowings-header {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.borrowings-header h1 {
+  margin: 0 0 8px;
+  color: #2563eb;
+}
+
+.borrowings-header p {
+  margin: 0;
+  color: #666;
+}
+
+.borrowings-header button,
+.empty-borrowings button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.error-message {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.empty-borrowings {
+  background: white;
+  padding: 80px 30px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 50px;
+}
+
+.empty-borrowings h2 {
+  margin: 15px 0;
+}
+
+.empty-borrowings p {
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.borrowings-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.borrowing-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.borrowing-image {
+  height: 250px;
+  background: #eef2f7;
+}
+
+.borrowing-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.no-image {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+}
+
+.borrowing-content {
+  padding: 25px;
+}
+
+.borrowing-content h2 {
+  margin-top: 0;
+}
+
+.borrowing-content p {
+  color: #666;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.status.pending {
+  color: #f59e0b;
+}
+
+.status.approved {
+  color: #16a34a;
+}
+
+.status.rejected {
+  color: #dc2626;
+}
+
+.status.returned {
+  color: #2563eb;
+}
+
+.return-btn {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.return-btn:hover {
+  opacity: 0.9;
+}
+
+.pending-text {
+  color: #f59e0b !important;
+}
+
+.rejected-text {
+  color: #dc2626 !important;
+}
+
+.returned-text {
+  color: #16a34a !important;
+}
+
+@media (max-width: 800px) {
+  .borrowings-page {
+    padding: 20px;
+  }
+
+  .borrowings-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .borrowings-list {
+    grid-template-columns: 1fr;
+  }
+}

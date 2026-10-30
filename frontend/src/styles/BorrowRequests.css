@@ -1,0 +1,240 @@
+.borrow-requests-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 40px 20px;
+}
+
+.borrow-requests-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.borrow-requests-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.borrow-requests-header h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #222;
+}
+
+.borrow-requests-header p {
+  margin-top: 8px;
+  color: #666;
+}
+
+.back-dashboard-btn {
+  border: none;
+  background: #333;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.back-dashboard-btn:hover {
+  opacity: 0.9;
+}
+
+.borrow-loading {
+  text-align: center;
+  padding: 80px 20px;
+  font-size: 18px;
+}
+
+.borrow-error {
+  background: #ffe6e6;
+  color: #b00020;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.no-borrow-requests {
+  background: white;
+  text-align: center;
+  padding: 70px 20px;
+  border-radius: 14px;
+}
+
+.empty-request-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.no-borrow-requests h2 {
+  margin-bottom: 10px;
+}
+
+.no-borrow-requests p {
+  color: #777;
+}
+
+.borrow-request-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(320px, 1fr)
+  );
+  gap: 25px;
+}
+
+.borrow-request-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.borrow-resource-image {
+  width: 100%;
+  height: 210px;
+  background: #eeeeee;
+}
+
+.borrow-resource-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.borrow-no-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+}
+
+.borrow-request-content {
+  padding: 20px;
+}
+
+.borrow-request-content h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.borrow-request-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.borrow-request-info div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.borrow-request-info strong {
+  color: #333;
+}
+
+.borrow-request-info span {
+  color: #666;
+  text-align: right;
+}
+
+.request-status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.request-status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.request-status.approved {
+  background: #d4edda;
+  color: #155724;
+}
+
+.request-status.rejected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.request-status.returned {
+  background: #e2e3e5;
+  color: #383d41;
+}
+
+.request-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.approve-request-btn,
+.reject-request-btn {
+  flex: 1;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.approve-request-btn {
+  background: #28a745;
+}
+
+.reject-request-btn {
+  background: #dc3545;
+}
+
+.approve-request-btn:hover,
+.reject-request-btn:hover {
+  opacity: 0.9;
+}
+
+.approve-request-btn:disabled,
+.reject-request-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.processed-message {
+  margin-top: 20px;
+  padding: 11px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.processed-message.approved {
+  background: #d4edda;
+  color: #155724;
+}
+
+.processed-message.rejected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.processed-message.returned {
+  background: #e2e3e5;
+  color: #383d41;
+}
+
+@media (max-width: 700px) {
+  .borrow-requests-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .borrow-request-grid {
+    grid-template-columns: 1fr;
+  }
+}
