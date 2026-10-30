@@ -1,0 +1,256 @@
+.my-resources-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 40px 20px;
+}
+
+.my-resources-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.my-resources-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+
+.my-resources-header h1 {
+  margin: 0 0 8px;
+  color: #2563eb;
+}
+
+.my-resources-header p {
+  margin: 0;
+  color: #666;
+}
+
+.my-resources-header button,
+.my-resources-empty button {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.my-resources-error {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.my-resources-empty {
+  background: white;
+  text-align: center;
+  padding: 70px 20px;
+  border-radius: 15px;
+}
+
+.empty-resource-icon {
+  font-size: 50px;
+}
+
+.my-resources-empty h2 {
+  margin: 15px 0 10px;
+}
+
+.my-resources-empty p {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.my-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.my-resource-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.my-resource-image {
+  width: 100%;
+  height: 240px;
+  background: #eef2f7;
+}
+
+.my-resource-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.no-resource-image {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+}
+
+.my-resource-content {
+  padding: 22px;
+}
+
+.my-resource-content h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.my-resource-content p {
+  color: #666;
+  line-height: 1.5;
+}
+
+.resource-availability {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.available {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.borrowed {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.my-resource-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.edit-resource-btn,
+.delete-resource-btn {
+  flex: 1;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-resource-btn {
+  background: #2563eb;
+}
+
+.delete-resource-btn {
+  background: #dc2626;
+}
+
+.edit-resource-btn:disabled,
+.delete-resource-btn:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.borrowed-warning {
+  font-size: 13px;
+  color: #dc2626 !important;
+  margin-top: 12px;
+}
+
+.edit-resource-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.edit-resource-modal {
+  background: white;
+  width: 100%;
+  max-width: 550px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.edit-resource-modal h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.edit-resource-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edit-resource-modal input,
+.edit-resource-modal textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.edit-resource-modal textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.edit-resource-modal label {
+  font-weight: 600;
+}
+
+.edit-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.save-resource-btn,
+.cancel-edit-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.save-resource-btn {
+  background: #16a34a;
+}
+
+.cancel-edit-btn {
+  background: #6b7280;
+}
+
+@media (max-width: 800px) {
+  .my-resources-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .my-resource-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,791 @@
+/* ===========================
+   Global Styles
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f4f7fb;
+}
+
+/* ===========================
+   Dashboard Layout
+=========================== */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ===========================
+   Sidebar
+=========================== */
+
+.sidebar {
+    width: 260px;
+    background: #2563eb;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.logo h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.menu {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0 15px;
+
+    flex: 1;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 14px 18px;
+
+    margin-bottom: 8px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.menu li:hover {
+    background: rgba(255,255,255,0.18);
+}
+
+.menu li.active {
+    background: white;
+    color: #2563eb;
+}
+
+.menu li svg {
+    font-size: 20px;
+}
+
+/* ===========================
+   Logout
+=========================== */
+
+.logout {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    cursor: pointer;
+
+    border-top: 1px solid rgba(255,255,255,0.2);
+
+    transition: .3s;
+}
+
+.logout:hover{
+
+    background: rgba(255,255,255,.18);
+
+}
+
+/* ===========================
+   Main Content
+=========================== */
+
+.main-content {
+
+    margin-left:260px;
+
+    flex:1;
+
+    padding:30px;
+
+}
+
+/* ===========================
+   Navbar
+=========================== */
+
+.navbar{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:18px 25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+
+}
+
+.left-nav{
+
+    font-size:24px;
+
+    cursor:pointer;
+
+}
+
+.right-nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+/* ===========================
+   Notification
+=========================== */
+
+.notification{
+
+    position:relative;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+.badge{
+
+    position:absolute;
+
+    top:-8px;
+
+    right:-10px;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:red;
+
+    color:white;
+
+    font-size:11px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+/* ===========================
+   Profile
+=========================== */
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.profile img{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+}
+
+.profile span{
+
+    font-weight:500;
+
+}
+
+/* ===========================
+   Welcome Section
+=========================== */
+
+.welcome{
+
+    margin-top:30px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+
+}
+
+.welcome h1{
+
+    color:#2563eb;
+
+    margin-bottom:10px;
+
+}
+
+.welcome p{
+
+    color:#555;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+   Statistics Cards
+=========================== */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-top:30px;
+
+}
+
+.stat-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.stat-icon{
+
+    font-size:38px;
+
+    color:#2563eb;
+
+    margin-bottom:15px;
+
+}
+
+.stat-card h2{
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+    color:#666;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:1100px){
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.sidebar{
+
+width:80px;
+
+}
+
+.sidebar span{
+
+display:none;
+
+}
+
+.logo h2{
+
+display:none;
+
+}
+
+.main-content{
+
+margin-left:80px;
+
+}
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ===============================
+   Featured Resources Section
+================================ */
+
+.featured-resources{
+
+    margin-top:35px;
+
+}
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.section-header h2{
+
+    color:#2563eb;
+
+    font-size:24px;
+
+}
+
+.empty-resource-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:60px;
+
+    text-align:center;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+
+}
+
+.empty-icon{
+
+    font-size:65px;
+
+    margin-bottom:20px;
+
+}
+
+.empty-resource-card h3{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+    color:#222;
+
+}
+
+.empty-resource-card p{
+
+    color:#666;
+
+    font-size:17px;
+
+    margin-bottom:30px;
+
+}
+
+.browse-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.browse-btn:hover{
+
+    background:#1d4ed8;
+
+}
+/* ===================================
+   Dashboard Bottom
+=================================== */
+
+.dashboard-bottom{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+    margin-top:35px;
+
+}
+
+.dashboard-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+
+}
+
+.card-title{
+
+    margin-bottom:25px;
+
+}
+
+.card-title h2{
+
+    color:#2563eb;
+
+}
+
+.empty-state{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    min-height:230px;
+
+}
+
+.empty-state-icon{
+
+    font-size:60px;
+
+    margin-bottom:18px;
+
+}
+
+.empty-state h3{
+
+    margin-bottom:12px;
+
+    color:#222;
+
+}
+
+.empty-state p{
+
+    color:#666;
+
+    line-height:28px;
+
+    max-width:280px;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.dashboard-bottom{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ===================================
+   Dashboard Analytics
+=================================== */
+
+.dashboard-analytics{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+    margin-top:35px;
+
+}
+
+.achievement-card,
+.community-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+
+}
+
+.achievement-card h2,
+.community-card h2{
+
+    color:#2563eb;
+
+    margin-bottom:25px;
+
+}
+
+.achievement-content{
+
+    text-align:center;
+
+}
+
+.achievement-score{
+
+    width:130px;
+
+    height:130px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+.achievement-content p{
+
+    color:#666;
+
+    line-height:28px;
+
+}
+
+.community-stats{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+.community-item{
+
+    flex:1;
+
+    background:#f4f7fb;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.community-item h3{
+
+    color:#2563eb;
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+.community-item span{
+
+    color:#555;
+
+    font-size:15px;
+
+}
+
+/* ===================================
+   Monthly Activity
+=================================== */
+
+.activity-section{
+
+    margin-top:35px;
+
+}
+
+.activity-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+
+}
+
+.activity-card h2{
+
+    color:#2563eb;
+
+    margin-bottom:25px;
+
+}
+
+.activity-empty{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:280px;
+
+    text-align:center;
+
+}
+
+.activity-icon{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+}
+
+.activity-empty h3{
+
+    margin-bottom:15px;
+
+}
+
+.activity-empty p{
+
+    color:#666;
+
+    max-width:420px;
+
+    line-height:28px;
+
+}
+
+/* ===================================
+   Responsive
+=================================== */
+
+@media(max-width:900px){
+
+.dashboard-analytics{
+
+grid-template-columns:1fr;
+
+}
+
+.community-stats{
+
+flex-direction:column;
+
+}
+
+}
+.sidebar{
+    overflow-y: scroll;
+}
